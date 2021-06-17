@@ -19,12 +19,13 @@ B.forEach(element=>{
 function check(Word,V){
     let a= Word.length;
     let b = V.length;
-    let i=0,j=0
-    for(;i<a&&j<b;i++){
-      if(V[i]==Word[j])
+    let i=0,j=0;
+    for(;i<a&&j<b;j++){
+      if(V[j]==Word[i])
       {
-          j++;
+          i++;
       }
     }
-    return j==a;
+    // console.log(i,j,a,b,Word,V);
+    return i==a;
 }
